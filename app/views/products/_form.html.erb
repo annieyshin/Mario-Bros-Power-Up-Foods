@@ -1,7 +1,14 @@
-<%= render "layouts/errors", :object => @story %>
+<%= render "layouts/errors", :object => @product %>
 
-<%= form_for @story do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+<%= form_for @product do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <hr>
+  <%= f.label :cost %>
+  <%= f.number_field :cost %>
+  <hr>
+  <%= f.label :country_of_origin %>
+  <%= f.text_field :country_of_origin %>
+  <hr>
   <%= f.submit %>
 <% end %>
