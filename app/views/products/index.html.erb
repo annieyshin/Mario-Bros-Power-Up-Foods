@@ -13,3 +13,13 @@
     <li><%= link_to product.name, product_path(product) %></li>
   <% end %>
 </ol>
+
+<hr>
+
+<h3>Products with the most reviews </h3>
+
+<ol>
+  <% @products.most_reviews.each do |product| %>
+    <li><%= product.name %></li>
+  <% end %>
+</ol>
