@@ -7,3 +7,9 @@
 </ul>
 
 <%= link_to "New Product", new_product_path %>
+
+<ol>
+  <% @products.three_most_recent.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ol>
