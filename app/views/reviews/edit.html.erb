@@ -1,0 +1,15 @@
+<h1>Edit Review</h1>
+
+<%= render "layouts/errors", :object => @review %>
+
+<%= form_for @review do |f| %>
+  <%= f.label :"Edit Review Description" %>
+  <%= f.text_field :description %>
+  <hr>
+  <%= f.label :"Edit Rating" %>
+  <%= f.number_field :rating %>
+  <hr>
+  <%= f.submit %>
+<% end %>
+
+<p><%= link_to "Return to review", review_path %></p>

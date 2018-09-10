@@ -1,13 +1,14 @@
 <h1>Products</h1>
-
+<%= link_to "Add a New Product", new_product_path %>
+<hr>
 <ul>
   <% @products.each do |product| %>
     <li><%= link_to product.name, product_path(product) %></li>
   <% end %>
 </ul>
 
-<%= link_to "New Product", new_product_path %>
-
+<hr>
+<h4>Latest Products</h4>
 <ol>
   <% @products.three_most_recent.each do |product| %>
     <li><%= link_to product.name, product_path(product) %></li>
