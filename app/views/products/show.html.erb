@@ -1,4 +1,8 @@
 <h1><%= @products.name %></h1>
 
-<h4><%=@products.cost %></h4>
-<h4><%=@products.country_of_origin %></h4>
+
+<% @products.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <h4><%=@products.cost %></h4>
+  <h4><%=@products.country_of_origin %></h4>
+<% end %>
