@@ -1,5 +1,5 @@
-<h1>Add New Review Information</h1>
+<h2>New review for <%= @product.name %></h2>
 
-<%= render "reviews/form" %>
+<%= render 'form' %>
 
-<p><%= link_to "Return to Reviews", reviews_path %></p>
+<p><%= link_to "Return to Reviews", product_reviews_path %></p>

@@ -8,14 +8,15 @@ class ReviewsController < ApplicationController
   end
 
   def new
+    @product = Product.find(params[:product_id])
     @review = Review.new
-    binding.pry
   end
 
   def create
+    @product = Product.find(params[:product_id])
     @review = Review.new(review_params)
     if @review.save
-      redirect_to reviews_path
+      redirect_to reviews_path(@review.product)
     else
       render :new
     end
@@ -42,7 +43,7 @@ class ReviewsController < ApplicationController
 
   private
   def review_params
-    params.require(:review).permit(:description, :rating, :product_id)
+    params.require(:review).permit(:description, :rating)
   end
 
 end
