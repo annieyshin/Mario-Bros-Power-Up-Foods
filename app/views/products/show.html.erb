@@ -2,3 +2,15 @@
 
   <h4>Cost: $<%= @product.cost %></h4>
   <h4>Country of Origin: <%=@product.country_of_origin %></h4>
+  <p><%= link_to "Edit", edit_product_path(@product) %></p>
+  <p><%= link_to "Delete", product_path(@product),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
+
+<p><%= link_to "Return to Products", products_path %></p>
+
+
+
+<% @product.reviews.each do |product| %>
+  <% product.name %>
+<% end %>

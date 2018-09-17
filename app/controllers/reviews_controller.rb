@@ -9,6 +9,7 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
+    binding.pry
   end
 
   def create
@@ -26,7 +27,6 @@ class ReviewsController < ApplicationController
 
   def update
     @review= Review.find(params[:id])
-
     if @review.update(review_params)
       redirect_to review_path
     else
@@ -42,7 +42,7 @@ class ReviewsController < ApplicationController
 
   private
   def review_params
-    params.require(:review).permit(:description, :rating)
+    params.require(:review).permit(:description, :rating, :product_id)
   end
 
 end
