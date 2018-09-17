@@ -3,7 +3,7 @@ Review.destroy_all
 
 50.times do
   product = Product.create!(name: Faker::Food.ingredient,
-                  country_of_origin: Faker::Nation.nationality,
+                  country_of_origin: Faker::Address.country,
                   cost: Faker::Number.digit
                 )
   5.times do

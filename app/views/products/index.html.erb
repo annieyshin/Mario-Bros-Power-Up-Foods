@@ -24,3 +24,11 @@
     <li><%= product.name %></li>
   <% end %>
 </ol>
+
+<h3>Product made in the USA </h3>
+
+<ol>
+  <% @products.madeinusa.each do |product| %>
+    <li><%= product.name %></li>
+  <% end %>
+</ol>
