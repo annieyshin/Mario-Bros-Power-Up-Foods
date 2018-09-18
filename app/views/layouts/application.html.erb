@@ -12,15 +12,22 @@
   <body>
     <%= flash[:alert] %>
     <%= flash[:notice] %>
-<div class="container">
 
+    <nav class="navbar navbar-light">
+      <div class="navbar-header">
+        <h1>Mario's Specialty Foods</h1>
+      </div>
+      <span class="navbar-text">
+        <h2 class="homelinktext"><%= link_to "Home", products_path %></h2>
+      </span>
+      <span class="navbar-text">
+        <h2><%= link_to "Add New Product", new_product_path %></h2>
+      </span>
+     </nav>
 
-    <%= yield %>
-</div>
-    <% content_for(:navbar) do %>
-      <li><a href="/">Home</a></li>
-      <li><a href="products/index">Products</a></li>
-    <% end %>
+  <div class="container">
+      <%= yield %>
+  </div>
 
   </body>
 </html>

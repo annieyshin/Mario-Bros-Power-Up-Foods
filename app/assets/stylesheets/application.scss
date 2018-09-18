@@ -4,4 +4,32 @@
 
 .container {
   background-color: lightgreen;
+  font-size: 14pt;
+  font-family: monospace;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+
+nav {
+  background: red;
+  opacity: .5;
+  height: 140px;
+}
+
+.navbar-header {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+.homelinktext {
+  color: gold;
+  text-align: right;
 }
