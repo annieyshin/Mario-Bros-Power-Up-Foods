@@ -8,7 +8,7 @@
 </ul>
 
 <hr>
-<h4>Latest Products</h4>
+<h3>Latest Products</h3>
 <ol>
   <% @products.three_most_recent.each do |product| %>
     <li><%= link_to product.name, product_path(product) %></li>
