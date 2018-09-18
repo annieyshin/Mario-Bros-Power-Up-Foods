@@ -5,6 +5,7 @@ class ReviewsController < ApplicationController
 
   def show
     @review = Review.find(params[:id])
+    @product = @review.product
   end
 
   def new
@@ -23,13 +24,15 @@ class ReviewsController < ApplicationController
   end
 
   def edit
-    @review = Review.find(params[:id])
+    @product = Product.find(params[:product_id])
+    @review = @product.reviews.find(params[:id])
+
   end
 
   def update
     @review= Review.find(params[:id])
     if @review.update(review_params)
-      redirect_to review_path
+      redirect_to product_path(@review.product)
     else
       render :edit
     end
@@ -38,7 +41,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
-    redirect_to reviews_path
+    redirect_to product_path(@review.product)
   end
 
   private
