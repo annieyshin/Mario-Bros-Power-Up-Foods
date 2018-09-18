@@ -7,6 +7,8 @@ gem 'jquery-rails'
 
 gem 'faker'
 
+gem 'bootstrap-sass'
+
 gem 'capybara'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
