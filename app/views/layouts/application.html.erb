@@ -14,15 +14,21 @@
     <%= flash[:notice] %>
 
     <nav class="navbar navbar-light">
-      <div class="navbar-header">
-        <h1>Mario's Specialty Foods</h1>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <h1>Mario's Specialty Foods</h1>
+        </div>
+
+
+        <ul class="nav navbar-nav navbar-right">
+          <span class="navbar-text">
+            <h2><%= link_to "Add New Product", new_product_path %></h2>
+          </span>
+          <span class="navbar-text">
+            <h2 class="homelinktext"><%= link_to "Home", products_path %></h2>
+          </span>
+        </ul>
       </div>
-      <span class="navbar-text">
-        <h2 class="homelinktext"><%= link_to "Home", products_path %></h2>
-      </span>
-      <span class="navbar-text">
-        <h2><%= link_to "Add New Product", new_product_path %></h2>
-      </span>
      </nav>
 
   <div class="container">
